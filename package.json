@@ -1,0 +1,51 @@
+{
+  "name": "nodejs__simple-crud-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -w",
+    "start:prod": "tsc && ts-node ./dist",
+    "start:dev": "nodemon src/index.ts",
+    "test": "node node_modules/jest/bin/jest.js --watchAll"
+  },
+  "nodemonConfig": {
+    "execMap": {
+      "ts": "ts-node"
+    },
+    "include": [
+      "src"
+    ],
+    "ext": "ts",
+    "exclude": [
+      "node_modules",
+      "src/**/*.spec.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mechyslau2/nodejs__simple-crud-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mechyslau2/nodejs__simple-crud-api/issues"
+  },
+  "homepage": "https://github.com/Mechyslau2/nodejs__simple-crud-api#readme",
+  "devDependencies": {
+    "@types/node": "17.0.42",
+    "@typescript-eslint/eslint-plugin": "5.28.0",
+    "@typescript-eslint/parser": "5.28.0",
+    "cross-env": "7.0.3",
+    "dotenv": "16.0.1",
+    "eslint": "8.17.0",
+    "jest": "28.1.1",
+    "nodemon": "2.0.16",
+    "ts-node": "10.8.1",
+    "typescript": "4.7.3"
+  },
+  "dependencies": {
+    "uuid": "8.3.2"
+  }
+}
