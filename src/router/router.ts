@@ -6,6 +6,7 @@ const customRouter = (pathURL: string) => {
         return ({
             pathURL,
             'GET': async(req, res) => Actions.getAllUsers(req, res),
+            'POST': async(req, res) => Actions.postUser(req, res),
         })
     }
 
@@ -13,7 +14,6 @@ const customRouter = (pathURL: string) => {
         return ({
             pathURL,
             'GET': async(req, res) => Actions.getUser(req, res),
-            'POST': async(req, res) => Actions.postUser(req, res),
             'PUT': async(req, res) => Actions.updateUser(req, res),
             'DELETE': async(req, res) => Actions.deleteUser(req, res),
         })
