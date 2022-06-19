@@ -15,9 +15,9 @@ export const getUserById = (id) => {
 }
 
 export const deleteUser = id => {
-    const user = users.find(item => item.id = id);
+    const user = users.find(item => item.id === id);
     users = users.filter(item => item.id !== id);
-    return user ? users: null;
+    return user ? [...users] : null;
 }
 
 export const updateUser = obj => {

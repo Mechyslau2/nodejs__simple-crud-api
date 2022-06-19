@@ -1,5 +1,5 @@
 //@ts-ignore
-import * as Actions from '../actions/actions.ts';
+import * as Actions from '../actions/index.ts';
 
 const customRouter = (pathURL: string) => {
     if (pathURL === '/api/users') {
